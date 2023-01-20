@@ -24,16 +24,14 @@ export class Cart {
     return this.total;
   }
 
-  validate(): boolean {
+  isValid(): boolean {
+    let validator: boolean;
     if (this.total === 0) {
-      return false;
+      return (validator = false);
     }
     if (this.items.length === 0) {
-      return false;
+      return (validator = false);
     }
-    if (this.address.city === '') {
-      return false;
-    }
-    return true;
+    return (validator = true);
   }
 }
